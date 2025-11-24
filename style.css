@@ -1,11 +1,12 @@
 /* ---------- Variables ---------- */
 :root {
-  --bg: #e5e5e5;             /* subtle gray background */
-  --card-basic: #ffffff;     /* white card */
-  --card-professional: #ffffff; /* very light gray */
-  --card-enterprise: #ffffff;   /* light gray */
-  --text-color: #000000;      /* black text on cards */
-  --accent: #0077b6;          /* professional blue for tags/buttons */
+  --bg: #1b1b1b;               /* subtle gray background */
+  --card-basic: #0f0a0a;       /* white card */
+  --card-professional: #0f0a0a; /* very light gray */
+  --card-enterprise: #0f0a0a;   /* light gray */
+  --text-color: #fefcfc;        /* black text on cards */
+  --accent: #0077b6;            /* professional blue for tags/buttons */
+  --border-color: #0077b6;      /* blue border */
   --radius: 16px;
   --font-family: 'Inter', sans-serif;
 }
@@ -19,7 +20,7 @@
 
 body {
   background: var(--bg);
-  color: #000000;
+  color: #efeded;
   min-height: 100vh;
   font-family: var(--font-family);
 }
@@ -40,12 +41,12 @@ header {
 h1 {
   font-size: 28px;
   margin-bottom: 8px;
-  color: #000000;
+  color: #f9f7f7;
 }
 
 p.lead {
   font-size: 16px;
-  color: #333333;
+  color: #f9f7f7;
 }
 
 /* ---------- Grid & Cards ---------- */
@@ -61,9 +62,10 @@ p.lead {
   padding: 30px;
   border-radius: var(--radius);
   color: var(--text-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
   text-align: center;
+  border: 2px solid var(--border-color); /* blue border */
 }
 
 .card:hover {
@@ -112,7 +114,7 @@ ul.features {
 ul.features li {
   margin: 10px 0;
   padding: 8px 0;
-  border-top: none; /* no lines */
+  border-top: none; /* clean, no lines */
   color: var(--text-color);
 }
 
