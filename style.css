@@ -59,14 +59,14 @@ p.lead {
 }
 
 .card {
-  width: 320px;
+  flex: 0 0 280px; /* fixed width card, prevents shrinking */
   padding: 30px;
   border-radius: var(--radius);
   color: var(--text-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
   text-align: center;
-  border: 2px solid var(--border-color); /* blue border */
+  border: 2px solid var(--border-color);
 }
 
 .card:hover {
@@ -160,8 +160,16 @@ ul.features li {
   }
 
   .grid {
-    gap: 16px;
-  }
+  display: flex;
+  gap: 24px;
+  overflow-x: auto; /* allow horizontal scroll on small screens */
+  padding-bottom: 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
+}
+.grid::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
 }
 
 @media (max-width: 400px) {
@@ -178,15 +186,8 @@ ul.features li {
     font-size: 14px;
   }
 }
-.grid {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto; /* allows horizontal scroll */
-  padding-bottom: 16px;
-  scroll-behavior: smooth;
-}
 
-.card {
-  flex: 0 0 280px; /* fixed width cards */
-  min-width: 280px;
-}
+
+
+
+
