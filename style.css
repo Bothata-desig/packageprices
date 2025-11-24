@@ -1,11 +1,11 @@
 /* ---------- Variables ---------- */
 :root {
-  --bg: #e5e5e5;             /* professional light gray background */
-  --card-basic: #1c1c1c;     /* dark charcoal */
-  --card-professional: #2c2c2c; /* slightly lighter charcoal */
-  --card-enterprise: #3c3c3c;   /* medium gray */
-  --text-color: #ffffff;      /* white text on cards */
-  --accent: #0077b6;          /* subtle professional blue for highlights/buttons */
+  --bg: #e5e5e5;             /* subtle gray background */
+  --card-basic: #ffffff;     /* white card */
+  --card-professional: #ffffff; /* very light gray */
+  --card-enterprise: #ffffff;   /* light gray */
+  --text-color: #000000;      /* black text on cards */
+  --accent: #0077b6;          /* professional blue for tags/buttons */
   --radius: 16px;
   --font-family: 'Inter', sans-serif;
 }
@@ -18,7 +18,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #dfe2e6, #c4c7cc); /* professional subtle gradient */
+  background: var(--bg);
   color: #000000;
   min-height: 100vh;
   font-family: var(--font-family);
@@ -68,7 +68,7 @@ p.lead {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 /* Individual card colors */
@@ -112,7 +112,7 @@ ul.features {
 ul.features li {
   margin: 10px 0;
   padding: 8px 0;
-  border-top: none; /* clean, no lines */
+  border-top: none; /* no lines */
   color: var(--text-color);
 }
 
