@@ -1,0 +1,143 @@
+/* ---------- Variables ---------- */
+:root {
+  --bg: #e5e5e5;             /* professional light gray background */
+  --card-basic: #1c1c1c;     /* dark charcoal */
+  --card-professional: #2c2c2c; /* slightly lighter charcoal */
+  --card-enterprise: #3c3c3c;   /* medium gray */
+  --text-color: #ffffff;      /* white text on cards */
+  --accent: #0077b6;          /* subtle professional blue for highlights/buttons */
+  --radius: 16px;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Global Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #dfe2e6, #c4c7cc); /* professional subtle gradient */
+  color: #000000;
+  min-height: 100vh;
+  font-family: var(--font-family);
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 24px;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+p.lead {
+  font-size: 16px;
+  color: #333333;
+}
+
+/* ---------- Grid & Cards ---------- */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 320px;
+  padding: 30px;
+  border-radius: var(--radius);
+  color: var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Individual card colors */
+.card[data-key="basic"] {
+  background: var(--card-basic);
+}
+
+.card[data-key="professional"] {
+  background: var(--card-professional);
+}
+
+.card[data-key="enterprise"] {
+  background: var(--card-enterprise);
+}
+
+/* ---------- Tags ---------- */
+.tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* ---------- Text & Features ---------- */
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+ul.features {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+ul.features li {
+  margin: 10px 0;
+  padding: 8px 0;
+  border-top: none; /* clean, no lines */
+  color: var(--text-color);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  border: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--accent);  /* professional blue */
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background: #005f87; /* slightly darker on hover */
+}
+
+.center {
+  text-align: center;
+}
