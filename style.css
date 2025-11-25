@@ -1,12 +1,12 @@
 /* ---------- Variables ---------- */
 :root {
   --bg: #1b1b1b;               /* dark background */
-  --card-basic: #0f0a0a;       /* dark card */
+  --card-basic: #000000;       /* dark card */
   --card-professional: #0f0a0a; /* dark card */
   --card-enterprise: #0f0a0a;   /* dark card */
-  --text-color: #fefcfc;        /* white text */
-  --accent: #0077b6;            /* blue for buttons and tags */
-  --border-color: #0077b6;      /* blue border */
+  --text-color: #ffffff;        /* white text */
+  --accent: #024385;            /* blue for buttons and tags */
+  --border-color: #024385;      /* blue border */
   --radius: 16px;
   --font-family: 'Inter', sans-serif;
 }
@@ -19,11 +19,19 @@
 }
 
 body {
-  background: var(--bg);
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
+    url("images/unsplash.jpg"); /* your image */
+  background-size: cover;       /* fill the screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* no repeat */
+  background-attachment: fixed; /* smooth parallax feel */
+  
   color: var(--text-color);
   min-height: 100vh;
   font-family: var(--font-family);
 }
+
 
 /* ---------- Container ---------- */
 .container {
